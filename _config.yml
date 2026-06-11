@@ -27,9 +27,9 @@ author:
   pronouns         : "he/him"
   bio              : "硕士"
   location         : "Wuhan, China"
-  employer         : "Tsinghua University"
+  employer         : "Wuhan University"
   uri              : # URL
-  email            : "jimmyhu2020@163.com"
+  email            : "jimmyh2020@163.com"
 
   # Academic websites
   academia         : # URL
@@ -56,7 +56,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "hjm-jim.bsky.social" # Replace this with you Bluesky username
+  bluesky          : # "hjm-jim.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -65,7 +65,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "jianming-huang"
+  linkedin         : # "jianming-huang"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

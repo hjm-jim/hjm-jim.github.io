@@ -10,16 +10,6 @@ redirect_from:
 {% include base_path %}
 
 ---
----
-name: 胡景明
-header:
-  - text: <span class="iconify" data-icon="tabler:phone"></span> 181-6401-2616
-    newLine: true
-  - text: <span class="iconify" data-icon="tabler:mail"></span> jimmyh2020@163.com
-    link: mailto:jimmyh2020@163.com
-  - text: <span class="iconify" data-icon="tabler:brand-github"></span> 个人作品页
-    link: https://word.tyger.wszgdhz.com/units
----
 
 <!-- Important: Replace all template content, especially contact details, with your own information. -->
 
