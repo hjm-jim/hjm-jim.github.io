@@ -1,31 +1,55 @@
----
-layout: compress
----
-
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-title">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#posts">博文</a>
+      </nav>
     </div>
+  </header>
 
-    {% include scripts.html %}
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      {% if site.author.avatar %}
+      <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="sidebar-avatar">
+      {% endif %}
+      <h2 class="sidebar-name">{{ site.author.name }}</h2>
+      {% if site.author.bio %}
+      <p class="sidebar-bio">{{ site.author.bio }}</p>
+      {% endif %}
+      <div class="sidebar-info">
+        {% if site.author.location %}
+        <span class="sidebar-item">📍 {{ site.author.location }}</span>
+        {% endif %}
+        {% if site.author.email %}
+        <a href="mailto:{{ site.author.email }}" class="sidebar-item sidebar-link">📧 {{ site.author.email }}</a>
+        {% endif %}
+        {% if site.author.github %}
+        <a href="https://github.com/{{ site.author.github }}" class="sidebar-item sidebar-link" target="_blank">💻 GitHub</a>
+        {% endif %}
+      </div>
+    </aside>
 
-  </body>
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+  </footer>
+</body>
 </html>
